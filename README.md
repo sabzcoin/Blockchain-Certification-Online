@@ -1,18 +1,20 @@
 # Blockchain-Certification-Online
-certificate for students sabzcoin Academy
-Certificate
+#certificate for students sabzcoin Academy
+
+#Certificate
 This project is used for getting educational or training certificates from Ethereum smart contracts with a web-based interface for data entry and getting certificates.
 
-Getting Started
+#Getting Started
 First of all I deployed the smart contract and debugged it. Now I am working on its web interface.
 
-Prerequisites
+#Prerequisites
 For installing this smart contract on Ethereum blockchain you need:
 
-Firefox or Chrome browser
+#Firefox or Chrome browser
 Metamask pluggin for Firefox or Chrome
 Remix development web site for Solidity.
-Installing
+
+#Installing
 I suggest you to install the contract on Renkeby test net to see how you can initialize it and define certificates.
 
 In this case you must have some Ether for Rinkeby test net. so you can go to Faucet site and do its step by step recommendations.
@@ -36,10 +38,10 @@ Finally you must define a certificate with Certificate Id (a string represents t
 
 Now You can Use functions 'GetCertificate' and 'GetJsonCertificate' having a certification id as a student or anyone else, functions 'GetCourseInfo' and 'GetJsonCourseInfo' having a course number, 'GetInstitute' as anyone, and functions 'GetInstructors', 'GetCorses', 'GetStudents', 'GetCertificates' as contract owner.
 
-Deployment
+#Deployment
 After you test and see the results, you can deply the Certificate smart contract on Ethereum main network. so you can set Metamask network to 'Main Ethereum Network'.
 
 
-sabzcoin - Founder of sabzacademy 
+#sabzcoin - Founder of sabzacademy 
 License
 This project is licensed under the MIT License - see the LICENSE.md file for details
