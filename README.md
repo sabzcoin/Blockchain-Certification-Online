@@ -12,6 +12,7 @@ For installing this smart contract on Ethereum blockchain you need:
 Firefox or Chrome browser
 Metamask pluggin for Firefox or Chrome
 Remix development web site for Solidity.
+
 Installing
 I suggest you to install the contract on Renkeby test net to see how you can initialize it and define certificates.
 
