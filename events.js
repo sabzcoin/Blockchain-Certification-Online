@@ -30,7 +30,7 @@ $(document).ready( async function(){
 		var account = web3.eth.accounts.create();
 		option = {from: account.address};
 	}
-	CryptoClass = new web3.eth.Contract(abi,contractAddress);
+	SabzAcademy = new web3.eth.Contract(abi,contractAddress);
 	message(web3.version,);
 //	if (metamask)
 //		var options = {from : web3.eth.accounts[0]};
@@ -39,7 +39,7 @@ $(document).ready( async function(){
 
 	$('#showInstitute').click(function(){
 		message('');
-		CryptoClass.methods.GetInstitute().call(option,function(error,result){
+		SabzAcademy.methods.GetInstitute().call(option,function(error,result){
 			if (! error) {
 				message(expand(result));
 			}
@@ -49,7 +49,7 @@ $(document).ready( async function(){
 	});
 	$('#showAdminStats').click(function(){
 		message('');
-		CryptoClass.methods.GetAdminStats().call(option,function(error,result){
+		SabzAcademy.methods.GetAdminStats().call(option,function(error,result){
 			if (! error) {
 				message(expand(result));
 			}
@@ -59,7 +59,7 @@ $(document).ready( async function(){
 	});
 	$('#showStats').click(function(){
 		message('');
-		CryptoClass.methods.GetStats().call(option,function(error,result){
+		SabzAcademy.methods.GetStats().call(option,function(error,result){
 			if (! error) {
 				message(expand(result));
 			}
@@ -69,7 +69,7 @@ $(document).ready( async function(){
 	});
 	$('#registerInstructor').click(function(){
 		message('');
-		CryptoClass.methods.RegisterInstructor($('#instructorUId').val(),$('#instructor').val())
+		SabzAcademy.methods.RegisterInstructor($('#instructorUId').val(),$('#instructor').val())
 			.send(option,function(error,result){
 			if (! error)
 				message(result);
@@ -79,7 +79,7 @@ $(document).ready( async function(){
 	});
 	$('#showInstructors').click(function(){
 		message('');
-		CryptoClass.methods.GetInstructors().call(option,function(error,result){
+		SabzAcademy.methods.GetInstructors().call(option,function(error,result){
 			if (! error)
 				message(expand(result));
 			else
@@ -88,7 +88,7 @@ $(document).ready( async function(){
 	});
 	$('#showInstructorInfo').click(function(){
 		message('');
-		CryptoClass.methods.GetInstructor($('#instructorUId1').val()).call(option,function(error,result){
+		SabzAcademy.methods.GetInstructor($('#instructorUId1').val()).call(option,function(error,result){
 			if (! error)
 				message(expand(result));
 			else
@@ -97,7 +97,7 @@ $(document).ready( async function(){
 	});
 	$('#showInstructorCourses').click(function(){
 		message('');
-		CryptoClass.methods.GetInstructorCourses($('#instructorUId2').val()).call(option,function(error,result){
+		SabzAcademy.methods.GetInstructorCourses($('#instructorUId2').val()).call(option,function(error,result){
 			if (! error)
 				message(expand(result));
 			else
@@ -106,7 +106,7 @@ $(document).ready( async function(){
 	});
 	$('#registerCourse').click(function(){
 		message('');
-		CryptoClass.methods.RegisterCourse(
+		SabzAcademy.methods.RegisterCourse(
 			$('#courseUId').val(),
 			$('#courseName').val(),
 			$('#startDate').val(),
@@ -122,7 +122,7 @@ $(document).ready( async function(){
 	});
 	$('#showCourses').click(function(){
 		message('');
-		CryptoClass.methods.GetCourses().call(option,function(error,result){
+		SabzAcademy.methods.GetCourses().call(option,function(error,result){
 			if (! error)
 				message(expand(result));
 			else
@@ -131,7 +131,7 @@ $(document).ready( async function(){
 	});
 	$('#addInstructor').click(function(){
 		message('');
-		CryptoClass.methods.AddCourseInstructor(
+		SabzAcademy.methods.AddCourseInstructor(
 			$('#courseId1').val(),
 			$('#InstructorId2').val())
 			.send(option,function(error,result){
@@ -143,7 +143,7 @@ $(document).ready( async function(){
 	});
 	$('#showCourseInfo').click(function(){
 		message('');
-		CryptoClass.methods.GetCourseInfo(
+		SabzAcademy.methods.GetCourseInfo(
 			$('#courseUId1').val())
 			.call(option,function(error,result){
 			if (! error)
@@ -154,7 +154,7 @@ $(document).ready( async function(){
 	});
 	$('#showCourseStudents').click(function(){
 		message('');
-		CryptoClass.methods.GetCourseStudents(
+		SabzAcademy.methods.GetCourseStudents(
 			$('#instructorUId3').val(),
 			$('#courseUId2').val())
 			.call(option,function(error,result){
@@ -166,7 +166,7 @@ $(document).ready( async function(){
 	});
 	$('#registerStudent').click(function(){
 		message('');
-		CryptoClass.methods.RegisterStudent(
+		SabzAcademy.methods.RegisterStudent(
 			$('#studentUId').val(),
 			$('#studentName').val())
 			.send(option,function(error,result){
@@ -178,7 +178,7 @@ $(document).ready( async function(){
 	});
 	$('#showStudents').click(function(){
 		message();
-		CryptoClass.methods.GetStudents().call(option,function(error,result){
+		SabzAcademy.methods.GetStudents().call(option,function(error,result){
 			if (! error)
 				message(expand(result));
 			else
@@ -187,7 +187,7 @@ $(document).ready( async function(){
 	});
 	$('#showStudentInfo').click(function(){
 		message();
-		CryptoClass.methods.GetStudentInfo(
+		SabzAcademy.methods.GetStudentInfo(
 			$('#studentUId1').val())
 			.call(option,function(error,result){
 			if (! error)
@@ -198,7 +198,7 @@ $(document).ready( async function(){
 	});
 	$('#registerCertificate').click(function(){
 		message('');
-		CryptoClass.methods.RegisterCertificate(
+		SabzAcademy.methods.RegisterCertificate(
 			$('#certificateUId').val(),
 			$('#courseId').val(),
 			$('#instructorId1').val(),
@@ -213,7 +213,7 @@ $(document).ready( async function(){
 	});
 	$('#showCertificates').click(function(){
 		message('');
-		CryptoClass.methods.GetCertificates().call(option,function(error,result){
+		SabzAcademy.methods.GetCertificates().call(option,function(error,result){
 			if (! error)
 				message(expand(result));
 			else
@@ -222,7 +222,7 @@ $(document).ready( async function(){
 	});
 	$('#showCertificate').click(function(){
 		message('');
-		CryptoClass.methods.GetCertificate(
+		SabzAcademy.methods.GetCertificate(
 			$('#certificateUId1').val())
 			.call(option,function(error,result){
 			if (! error)
@@ -233,7 +233,7 @@ $(document).ready( async function(){
 	});
 	$('#enableCertificate').click(function(){
 		message('');
-		CryptoClass.methods.EnableCertificate(
+		SabzAcademy.methods.EnableCertificate(
 			$('#certificateUId2').val())
 			.send(option,function(error,result){
 			if (! error)
@@ -244,7 +244,7 @@ $(document).ready( async function(){
 	});
 	$('#disableCertificate').click(function(){
 		message('');
-		CryptoClass.methods.DisableCertificate(
+		SabzAcademy.methods.DisableCertificate(
 			$('#certificateUId2').val())
 			.send(option,function(error,result){
 			if (! error)
@@ -255,7 +255,7 @@ $(document).ready( async function(){
 	});
 	$('#showStudentCertificates').click(function(){
 		message('');
-		CryptoClass.methods.GetStudentCertificates(
+		SabzAcademy.methods.GetStudentCertificates(
 			$('#studentUId2').val())
 			.call(option,function(error,result){
 			if (! error)
