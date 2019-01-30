@@ -1,6 +1,6 @@
 pragma solidity ^0.5.1;
 import './DataRegister.sol';
-contract sabzacademyCertificate is DataRegister {
+contract sabzacademy-Certificate is DataRegister {
     constructor(string memory _Institute) public notEmpty(_Institute) {
         owner = msg.sender;
         Institute = stringToBytes32(_Institute);
