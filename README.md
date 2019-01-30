@@ -10,8 +10,8 @@ First of all I deployed the smart contract and debugged it. Now I am working on 
 # Prerequisites 
 For installing this smart contract on Ethereum blockchain you need:
 1-Firefox or Chrome browser
-2-Metamask pluggin for Firefox or Chrome
-3-Remix development web site for Solidity.
+2-Metamask pluggin for Firefox or Chrome (https://metamask.io)
+3-Remix development web site for Solidity(https://remix.ethereum.org)
 
 # Installing
 I suggest you to install the contract on Renkeby test net to see how you can initialize it and define certificates.
